@@ -1,0 +1,21 @@
+{
+    "httpConfig":
+    {
+        "port": VALUE
+    },
+    "httpsConfig":
+    {
+        "port": VALUE,
+        "ssl_key_file": FILE.key,
+        "ssl_cert_file": FILE.crt
+    },
+    "maxPayload": 
+        SIZE_IN_BYTES,
+    "apps": [
+        {
+            "name": NAME,
+            "path": PATH,
+            "address_sharing": BOOL
+        }
+    ]
+}

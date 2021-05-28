@@ -1,0 +1,14 @@
+{
+    "httpConfig":
+    {
+        "port": 12776
+    },
+    "maxPayload": 
+        16777216,
+    "apps": [
+        {
+            "name": "Main",
+            "path": "/"
+        }
+    ]
+}
