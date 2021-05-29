@@ -10,14 +10,14 @@ var httpServer = null;
 var httpsServer = null;
 if (config.httpConfig) {
     httpServer = http.createServer();
-    httpServer.listen(config.httpConfig.port, function () { console.log('Listening on ' + httpServer.address().port); });
+    httpServer.listen(config.httpConfig.port, '0.0.0.0', function () { console.log('Listening on ' + httpServer.address().port); });
 }
 if (config.httpsConfig) {
     httpsServer = https.createServer({
         key: fs.readFileSync(config.httpsConfig.ssl_key_file),
         cert: fs.readFileSync(config.httpsConfig.ssl_cert_file)
     });
-    httpsServer.listen(config.httpsConfig.port, function () { console.log('Listening on ' + httpsServer.address().port); });
+    httpsServer.listen(config.httpsConfig.port, '0.0.0.0', function () { console.log('Listening on ' + httpsServer.address().port); });
 }
 var websocketSignalingServer = new wns.WebsocketNetworkServer();
 for (var _i = 0, _a = config.apps; _i < _a.length; _i++) {
